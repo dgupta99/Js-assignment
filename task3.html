@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Update Paragraph Text</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    #myParagraph {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    #updateTextBtn {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    #updateTextBtn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="myParagraph">Initial Text</p>
+    <button id="updateTextBtn">Update Text</button>
+  </div>
+
+  <script>
+    document.getElementById('updateTextBtn').addEventListener('click', () => {
+      document.getElementById('myParagraph').textContent = 'The text has been updated!';
+    });
+  </script>
+</body>
+</html>
