@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Content and Style</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      border: 2px solid #007acc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #myElement {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    #changeContentBtn {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    #changeContentBtn:hover {
+      background-color: #e65c00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="myElement">This is the original content.</div>
+    <button id="changeContentBtn">Change Content and Style</button>
+  </div>
+
+  <script>
+    document.getElementById('changeContentBtn').onclick = function() {
+      var element = document.getElementById('myElement');
+      element.textContent = 'The content has been changed!';
+      element.style.color = '#ff6600';
+      element.style.backgroundColor = '#e6f7ff';
+      element.style.border = '2px solid #007acc';
+    };
+  </script>
+</body>
+</html>
